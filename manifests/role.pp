@@ -28,7 +28,7 @@ define postgres::role($ensure, $password = false) {
         }
         absent:  {
             exec { "Remove $name postgres role":
-                command => "/usr/bin/dropeuser $name",
+                command => "/usr/bin/dropuser $name",
                 user => "postgres",
                 onlyif => "/usr/bin/psql -c '\\du' | grep '$name  *|'"
             }
