@@ -12,7 +12,7 @@
 # ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 # OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
-class postgres {
+class postgres::postgres {
 	package { [postgresql, postgresql-server]: ensure => installed }
 
     service { postgresql:
