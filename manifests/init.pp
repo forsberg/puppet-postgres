@@ -15,7 +15,7 @@
 class postgres {
 	package { [postgresql]: ensure => installed }
 
-    service { "postgresql-8.3":
+    service { "postgresql-${postgres_version}":
         ensure => running,
         enable => true,
         hasstatus => true,
