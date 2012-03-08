@@ -15,7 +15,7 @@
 class postgres {
 	package { [postgresql]: ensure => installed }
 
-    service { "postgresql-${postgres_version}":
+    service { "${postgres_service_name}":
         ensure => running,
         enable => true,
         hasstatus => true,
